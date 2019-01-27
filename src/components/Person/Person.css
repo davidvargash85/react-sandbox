@@ -1,0 +1,21 @@
+.Person {
+    width: 60%;
+    margin: 16px auto;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 2px 3px #cccccc;
+    padding: 10px;
+    text-align: center;
+}
+/* 
+@media (min-width:500px) {
+    .Person {
+        width: 450px;
+    }
+} */
+
+button {
+    background-color: white;
+    padding: 8px;
+    font: inherit;
+    border: 1px solid gray;
+}
