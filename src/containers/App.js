@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import UniqId from 'uniqid';
 
-import styles from './App.module.css';
+// import styles from './App.module.css';
+import './App.css';
 
 import PersonList from '../components/Person/PersonList';
 import ToggleBtn from '../components/ToggleBtn/ToggleBtn';
+import Greetings from '../components/Greetings/Greetings';
 
 class App extends Component { 
 
@@ -43,20 +45,10 @@ class App extends Component {
   };
 
   render() {
-   
-    let appStyles = [];
-    if (this.state.persons.length <= 1) {
-      appStyles = [styles.red, styles.bold];
-    } else if (this.state.persons.length <= 2){
-      appStyles = [styles.red];
-    }
-
-    appStyles.push(styles.App);
 
     return (
-        <div className={styles.App}>
-          <h1>Move constantly</h1>
-          <p className={appStyles.join(' ')}>Go up and forward...</p>
+        <div className='App'>
+          <Greetings count={this.state.persons.length} />
           <ToggleBtn toggle={this.toggleShowPersons} value={this.state.showPersons} />
           <PersonList
            click={this.deletePerson}

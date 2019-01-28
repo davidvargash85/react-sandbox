@@ -1,0 +1,15 @@
+button {
+    font-family: "Trebuchet MS, Helvetica, sans-serif";
+    margin: 10px auto;
+    cursor: pointer;
+    color: white;
+    box-shadow: 5px 10px #ddd;
+    border: 1px solid darkgray;  
+    background-color: steelblue;
+}
+  
+button:hover {
+    background-color: teal;
+    color: black;
+}
+   
