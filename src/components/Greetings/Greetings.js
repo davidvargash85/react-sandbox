@@ -1,19 +1,21 @@
 import React from 'react';
+import styles from './Greetings.module.css';
 
 const Greetings = (props) => {
     
     let appStyles = [];
     if (props.count <= 2) {
-      appStyles.push('red');
+      appStyles.push(styles.red);
     }
     if (props.count <= 1){
-      appStyles.push('bold');
+      appStyles.push(styles.bold);
     }
 
     return (
         <div>
-            <h1>Move constantly</h1>
-            <p className={appStyles.join(' ')}>Go up and forward...</p>
+            <h1>{props.title}</h1>
+            <p className={appStyles.join(' ')}>Move constantly</p>
+
         </div>
     );
 }

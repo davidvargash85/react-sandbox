@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import UniqId from 'uniqid';
 
-// import styles from './App.module.css';
 import './App.css';
 
 import PersonList from '../components/Person/PersonList';
@@ -46,9 +45,9 @@ class App extends Component {
 
   render() {
 
-    return (
+    return ( 
         <div className='App'>
-          <Greetings count={this.state.persons.length} />
+          <Greetings title={this.props.title} count={this.state.persons.length} />
           <ToggleBtn toggle={this.toggleShowPersons} value={this.state.showPersons} />
           <PersonList
            click={this.deletePerson}
